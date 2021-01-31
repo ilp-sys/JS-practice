@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Word Counter</title>
+  </head>
+  <body>
+    <h1>Self-Introduction Document</h1>
+            <!--event & event-handling-->>
+    <textarea onkeydown='wordcounter();' class="form-control" rows="3" id="content">Please enter text.</textarea>
+    <span id="count">(0/200)</span>
+    <script>
+      function wordcounter() 
+      {
+        //DOM
+        var content = document.getElementById('content').value;
+        if (content.length > 200)
+        {
+          content = content.sbstring(0,200);
+          document.getElementById('content').value = content;
+        }
+        document.getElementById('count').innerHTML = '(' + content.length + '/200)';
+      }
+      wordcounter();
+    </script>
+    <br></br>
+    <a href="index.html">BACK TO HOME</a>
+  </body>
+</html>
