@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Lotto Number Drawer</title>
+  </head>
+  <body>
+    <h1>Lotto Number Drawer</h1>
+    <script>
+
+      var lotto = [];
+      while (lotto.length < 6) 
+      {
+        var num = parseInt(Math.random() * 45 + 1);
+        if (lotto.indexOf(num) == -1) 
+          lotto.push(num);
+      }
+
+      lotto.sort((a,b)=>a-b);
+
+      var i;
+      for(i = 0; i < 6; i++){
+        document.write("<div>" + lotto[i] + "</div>");
+      }
+    </script>
+    <a href="index.html">BACK TO HOME</a>
+  </body>
+</html>
